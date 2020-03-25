@@ -1,0 +1,14 @@
+<movie-detail [movie]="selectedMovie" ></movie-detail>
+
+<div class="card">
+    <div class="card-header">{{title}}</div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" [ngClass]="{'active': movie==selectedMovie}" *ngFor="let movie of movies" (click)="onSelect(movie)">
+             <span class="badge badge-primary">{{movie.id}}</span>
+            
+             {{movie.name}}
+             <span class="badge badge-warning">{{movie.releaseDate}}</span>
+             <span class="close">x</span>
+        </li>
+    </ul>
+</div>

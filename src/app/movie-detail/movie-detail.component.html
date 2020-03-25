@@ -1,0 +1,11 @@
+<div class="card" *ngIf="movie">
+  <div class="card-body">
+    {{movie.id}} - {{movie.name}} ({{movie.releaseDate}})
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="movie.name">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
